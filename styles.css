@@ -1,0 +1,265 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  padding: 0 28px;
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--gray);
+}
+
+h1 span {
+  font-weight: 700;
+  color: #15202a;
+}
+
+h2 {
+  font-size: 12px;
+  line-height: auto;
+  font-weight: 300;
+  color: #15202a;
+  text-align: center;
+}
+
+a {
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border: 0.92px solid rgba(76, 123, 243, 0.15);
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  background-color: var(--blue);
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 81px 0 32px 0;
+}
+
+.logo {
+  display: block;
+  width: 56px;
+}
+
+#intro {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 32px;
+}
+
+.main-img {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  display: grid;
+  gap: 27px;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding-bottom: 37px;
+}
+
+footer p {
+  text-align: center;
+  color: #9b9b9b;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 11.71px;
+}
+
+.social svg {
+  scale: 0.5;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 72px;
+  padding: 0 20px;
+}
+
+#form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #15202a;
+  padding: 10px 32px;
+  border-radius: 28px;
+  border: 1px solid #b8c7ed;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.01);
+}
+
+input::placeholder {
+  color: #b8c7ed;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: var(--blue);
+  font-family: inherit;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  padding: 12px 0;
+  border-radius: 28px;
+  box-shadow: 0 5px 10px 2px rgba(76, 123, 243, 0.23);
+}
+
+button:hover {
+  background-color: #7196f5;
+}
+
+.input-error {
+  border: 1px solid var(--light-red);
+}
+
+.error-message {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+  color: var(--light-red);
+  font-size: 10px;
+  line-height: 20px;
+  font-style: italic;
+  letter-spacing: 0.13px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  header {
+    padding: 80px 0 40px 0;
+  }
+
+  .logo {
+    display: block;
+    width: 90px;
+  }
+
+  #intro {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .main-img {
+    display: block;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  footer {
+    display: grid;
+    gap: 25px;
+    margin-top: 72px;
+    padding-bottom: 50px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    max-width: 637px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 94px;
+    padding: 0 0 0 0;
+  }
+
+  input {
+    width: 421px;
+    font-size: 16px;
+    padding: 18px 30px;
+  }
+
+  button {
+    width: 200px;
+    height: 56px;
+    font-size: 16px;
+    line-height: auto;
+    padding: 18px 0;
+  }
+
+  .error-message {
+    display: block;
+    text-align: left;
+    margin-top: 6px;
+    margin-left: 30px;
+    color: var(--light-red);
+    font-size: 12px;
+    line-height: 20px;
+    font-style: italic;
+    letter-spacing: 0.13px;
+  }
+}
