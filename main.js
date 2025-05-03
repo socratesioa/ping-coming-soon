@@ -16,7 +16,7 @@ const handleSubmit = (e) => {
   const email = data.email.trim();
 
   if (!email) {
-    errors.email = "Please provide a valid email address";
+    errors.email = "Whoops! It looks like you forgot to add your email";
     emailInput.classList.add("input-error");
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
     errors.email = "Please provide a valid email address";
